@@ -1,9 +1,13 @@
-/*
+/**
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+* Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package com.mycompany.cuentas;
 
+/**
+ *
+ * @author Leticia Quintero
+ */
 public class CCuenta {
 
     /**
@@ -61,17 +65,31 @@ public class CCuenta {
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
     }
-    
+    /**
+     * @param nombre del propietario de la cuenta
+     * @param cuenta numero de cuenta
+     * @param saldo de la cuenta
+     * @param tipoInteres tipo de interes 
+     */
     private String nombre;
     private String cuenta;
     private double saldo;
     private double tipoInterés;
     
-
+    /**
+     *
+     */
     public CCuenta()
     {
     }
 
+    /**
+     *
+     * @param nom se declaran variables y se les cambia el nombre
+     * @param cue se declaran variables y se les cambia el nombre
+     * @param sal se declaran variables y se les cambia el nombre
+     * @param tipo se declaran variables y se les cambia el nombre
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -79,11 +97,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     *
+     * @return el saldo actual
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     *
+     * @param cantidad a ingresar
+     * @throws Exception en caso de querer ingresar cantidades negativas
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -91,6 +118,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     *
+     * @param cantidad a retirar
+     * @throws Exception en caso de querer retirar cantidades negativas
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
